@@ -18,4 +18,16 @@ export const routes: Routes = [
     path: 'contatos',
     loadComponent: () => import('./paginas/contatos/contatos.page').then( m => m.ContatosPage)
   },
+  {
+    path: 'login',
+    loadComponent: () => import('./paginas/login/login.page').then( m => m.LoginPage)
+  },
+  {
+    path: 'registro',
+    loadComponent: () => import('./paginas/registro/registro.page').then( m => m.RegistroPage)
+  },
+  {
+    path: 'interno',
+    loadComponent: () => import('./paginas/interno/interno.page').then( m => m.InternoPage)
+  },
 ];

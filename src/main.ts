@@ -12,6 +12,8 @@ import { provideFirebaseApp, initializeApp }
 import { getFirestore, provideFirestore } 
       from '@angular/fire/firestore';
 
+import { provideAuth, getAuth } 
+      from '@angular/fire/auth';      
 
 if (environment.production) {
   enableProdMode();
@@ -23,7 +25,7 @@ bootstrapApplication(AppComponent, {
     importProvidersFrom(IonicModule.forRoot({}),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
-    
+    provideAuth(() => getAuth()),
     
     ),
     provideRouter(routes),
